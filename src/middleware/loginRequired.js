@@ -16,7 +16,7 @@ export default async (req, res, next) => {
     const data = jwt.verify(token, process.env.TOKEN_SECRET);
     const { id, email } = data;
 
-    const user = User.findOne({
+    const user = await User.findOne({
       where: {
         id,
         email,
