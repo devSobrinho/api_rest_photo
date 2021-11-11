@@ -28,16 +28,7 @@ export default class Photos extends Model {
           return `${appConfig.url}/photos/${this.getDataValue('filename')}`;
         },
       },
-      user_id: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
-        references: {
-          model: 'users',
-          key: 'id',
-        },
-        onDelete: 'SET NULL',
-        onUpdate: 'CASCADE',
-      },
+
     }, {
       sequelize,
       tableName: 'photos',
