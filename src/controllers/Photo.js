@@ -76,7 +76,7 @@ class Photo {
       const { id } = req.params;
       const photoData = await Photos.findOne({ where: { id, user_id } });
       if (!photoData) {
-        return res.json({ errors: ['Foto não pode ser deletada.'] });
+        return res.json({ errors: ['Foto não pode ser deletada'] });
       }
       const { originalname, filename, url } = photoData;
       photoData.destroy();
