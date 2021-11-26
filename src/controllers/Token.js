@@ -16,7 +16,7 @@ class Token {
 
     if (!user) {
       return res.json({
-        errors: ['Usuário não existe'],
+        errors: ['Usuário ou Senha inválido'],
       });
     }
 
@@ -24,7 +24,7 @@ class Token {
 
     if (!passwordValidate) {
       return res.json({
-        errors: ['Senha inválidas'],
+        errors: ['Usuário ou Senha inválido'],
       });
     }
 
